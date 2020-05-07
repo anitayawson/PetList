@@ -1,19 +1,21 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react'
+import {View, StyleSheet} from 'react-native'
+import Pet from './components/Pet'
+import Main from './components/Main'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <View style={styles.pageBackground}>
+        <Main/>
+      </View>
+    )
+  }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  pageBackground : {
+    backgroundColor: "#f5f5f5",
+    flex: 1
+  }
+})
